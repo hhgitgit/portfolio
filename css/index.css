@@ -96,10 +96,6 @@ header>h1{
     margin: 0 auto;
 }
 
-/* .section-wrap>*{
-    border: 1px solid blue;
-} */
-
 #main{
     display: flex;
     align-items: center;
@@ -273,6 +269,7 @@ header>h1{
 #project .project-box .right .project-skill .skill-list{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 #project .project-box .right .project-skill .skill-list li{
@@ -351,6 +348,11 @@ header>h1{
         font-size: 30px;
     }
 
+    .section-wrap>*{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     #main{
         flex-direction: column;
         padding-top: 150px;
@@ -362,7 +364,7 @@ header>h1{
     }
 
     #main>p{
-        font-size: 30px;
+        font-size: 24px;
     }
 
     #skill{
@@ -372,6 +374,12 @@ header>h1{
 
     #skill .logo-list{
         gap: 20px;
+    }
+
+    #skill .logo-list li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #skill .logo-list img{
@@ -406,6 +414,7 @@ header>h1{
     }
 
     #project .project-box .right{
+        width: 100%;
         font-size: 16px;
         display: flex;
         flex-direction: column;
