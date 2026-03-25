@@ -1,0 +1,432 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendardvarialbe.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Pretendard', sans-serif;
+    color: #222;
+}
+
+.m-tit{
+    font-size: 80px;
+    font-family: 'GMarketSans';
+    font-weight: 500;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.m-tit::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 20px;
+    background-color: #5A4EFF;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.m-tit:hover::after{
+    width: 120%;
+}
+
+header{
+    background-color: #5A4EFF;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+header>h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding: 10px 0;
+}
+
+
+.section-wrap{
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* .section-wrap>*{
+    border: 1px solid blue;
+} */
+
+#main{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    min-height: 100vh;
+}
+
+#main>img{
+    width: 450px;
+}
+
+#main>p{
+    flex-grow: 1;
+    font-size: 45px;
+    line-height: 180%;
+    font-family: 'GMarketSans';
+    white-space: nowrap;
+}
+
+#main>p>span{
+    color: #5A4EFF;
+}
+
+#skill{
+    min-height: 100vh;
+    padding: 120px 0;
+    margin-top: 250px;
+    margin-bottom: 200px;
+}
+
+
+#skill .m-tit{
+    margin-bottom: 100px;
+}
+
+#skill .logo-list{
+    gap: 80px;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    align-items: center;
+    justify-content: center;
+}
+
+#skill .logo-list img{
+    width: 100px;
+    transition: all 0.3s;
+}
+
+#skill .logo-list .css3 img{
+    width: 93px;
+}
+
+#skill .logo-list .figma img{
+    width: 75px;
+}
+
+#skill .logo-list img:hover{
+    transform: scale(0.9);
+}
+
+#project{
+    padding-bottom: 150px;
+}
+
+#project .m-tit{
+    margin-bottom: 100px;
+}
+
+#project .project-box{
+    display: flex;
+    gap: 80px;
+    margin-bottom: 100px;
+}
+
+#project .project-box:nth-of-type(2) .left, 
+#project .project-box:nth-of-type(4) .left,
+#project .project-box:nth-of-type(6) .left {
+    order: 2;
+}
+
+#project .project-box .left img{
+    width: 500px;
+}
+
+#project .project-box .left a{
+    background-color: #5A4EFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 20px auto 10px auto;
+    display: block;
+    width: fit-content;
+    transition: all 0.3s;
+}
+
+#project .project-box .left a:hover{
+    transform: scale(1.05);
+}
+
+#project .project-box .right{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#project .project-box .right .project-tit{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#project .project-box .right .project-tit p:nth-of-type(1){
+    color: #5A4EFF;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#project .project-box .right .project-tit p:nth-of-type(2){
+    font-size: 24px;
+}
+
+#project .project-box .right .project-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#project .project-box .right .project-info .sub-tit{
+    width: 90px;
+    font-weight: 600;
+    color: #5A4EFF;
+}
+
+#project .project-box .right .project-info .sub-tit:nth-of-type(1),
+#project .project-box .right .project-info .period{
+    margin-bottom: 10px;
+}
+
+#project .project-box .right .project-info .period,
+#project .project-box .right .project-info .contribute{
+    width: calc(100% - 90px);
+}
+
+#project .project-box .right .project-info .contribute {
+    display: flex;
+    gap: 10px;
+    padding-top: 5px;
+}
+
+#project .project-box .right .project-info .contribute li{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #D9D9D9;
+}
+
+#project .project-box .right .project-cont{
+    line-height: 180%;
+}
+
+#project .project-box .right .project-skill .sub-tit{
+    font-weight: 600;
+    color: #5A4EFF;
+    margin-bottom: 10px;
+}
+
+#project .project-box .right .project-skill .skill-list{
+    display: flex;
+    gap: 10px;
+}
+
+#project .project-box .right .project-skill .skill-list li{
+    background-color: #ececec;
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+
+@media all and (max-width: 1450px){
+    .m-tit{
+        font-size: 60px;
+    }
+
+    header>h1{
+        font-size: 40px;
+    }
+
+    #main>img{
+        width: 200px;
+    }
+
+    #main>p{
+        font-size: 30px;
+    }
+
+    #skill .logo-list{
+        gap: 30px;
+        width: 100%;
+    }
+
+    #skill .logo-list img{
+        width: 80px;
+    }
+
+    #skill .logo-list .css3 img{
+        width: 75px;
+    }
+
+    #skill .logo-list .figma img{
+        width: 60px;
+    }
+
+    #project .project-box{
+        align-items: center;
+    }
+
+    #project .project-box .left img{
+        width: 300px;
+    }
+
+    #project .project-box .right .project-tit p:nth-of-type(1){
+        font-size: 40px;
+    }
+
+    #project .project-box .right .project-tit p:nth-of-type(2){
+        font-size: 22px;
+    }
+
+    #project .project-box .right .project-info .sub-tit{
+        width: 80px;
+    }
+
+    #project .project-box .right .project-info .period,
+    #project .project-box .right .project-info .contribute{
+        width: calc(100% - 80px);
+    }
+
+}
+
+
+@media all and (max-width: 1000px){
+    header h1{
+        font-size: 30px;
+    }
+
+    #main{
+        flex-direction: column;
+        padding-top: 150px;
+        min-height: 550px;
+    }
+
+    #main>img{
+        width: 300px;
+    }
+
+    #main>p{
+        font-size: 30px;
+    }
+
+    #skill{
+        min-height: 600px;
+        padding-top: 0;
+    }
+
+    #skill .logo-list{
+        gap: 20px;
+    }
+
+    #skill .logo-list img{
+        width: 60px;
+    }
+
+    #skill .logo-list .css3 img{
+        width: 56px;
+    }
+
+    #skill .logo-list .figma img{
+        width: 45px;
+    }
+
+    #project{
+        margin-top: 50px;
+    }
+
+    #project .project-box{
+        flex-direction: column;
+        gap: 20px;
+     }
+
+    #project .project-box:nth-of-type(2) .left, 
+    #project .project-box:nth-of-type(4) .left,
+    #project .project-box:nth-of-type(6) .left {
+        order: 0;
+    }
+
+    #project .project-box .left a{
+        font-size: 18px;
+    }
+
+    #project .project-box .right{
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #project .project-box .right .project-info .sub-tit{
+        width: 70px;
+    }
+
+    #project .project-box .right .project-info .period,
+    #project .project-box .right .project-info .contribute{
+        width: calc(100% - 70px);
+    }
+
+
+    #project .project-box .right .project-tit p:nth-of-type(1){
+        font-size: 35px;
+    }
+
+    #project .project-box .right .project-tit p:nth-of-type(2){
+        font-size: 20px;
+    }
+}
